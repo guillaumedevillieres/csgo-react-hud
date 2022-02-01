@@ -17,7 +17,7 @@ export default class SeriesBox extends React.Component<Props> {
     const right = map.team_ct.orientation === "left" ? map.team_t : map.team_ct;
     return (
       <div id="encapsulator">
-        <div className="container left">
+        {/*<div className="container left">
           <div className={`series_wins left `}>
             <div className={`wins_box_container`}>
               {new Array(amountOfMaps).fill(0).map((_, i) => (
@@ -25,11 +25,11 @@ export default class SeriesBox extends React.Component<Props> {
               ))}
             </div>
           </div>
-        </div>
+        </div>*/}
         <div id="series_container">
           <div id="series_text">{ bo ? `BEST OF ${bo}` : '' }</div>
         </div>
-        <div className="container right">
+        {/*<div className="container right">
           <div className={`series_wins right `}>
             <div className={`wins_box_container`}>
               {new Array(amountOfMaps).fill(0).map((_, i) => (
@@ -37,7 +37,7 @@ export default class SeriesBox extends React.Component<Props> {
               ))}
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
     );
   }

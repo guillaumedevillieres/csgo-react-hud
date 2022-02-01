@@ -1,8 +1,8 @@
 .map_series_container {
 	position: fixed;
-	top: 100px;
-	right: 20px;
-	width: 347px;
+	top: 425px;
+	right: 15px;
+	width: 335px;
 	display: flex;
 	opacity: 0;
 	transition: opacity 0.5s;
@@ -25,14 +25,15 @@
 		.veto_map_name {
 			width: 116px;
 			text-transform: uppercase;
-			background-color: rgba(255,255,255,1);
-			color: black;
+			text-shadow: 2px 2px 2px #000000;
+			color: #FFF;
 			height: 100%;
 			display: flex;
 			font-family: Montserrat;
 			font-weight: 700;
 			align-items: center;
 			justify-content: center;
+			background-size: cover;
 		}
 		div {
 			img {

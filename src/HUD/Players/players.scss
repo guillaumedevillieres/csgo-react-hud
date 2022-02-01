@@ -1,6 +1,6 @@
 .teambox {
     position: fixed;
-    bottom: 10px;
+    bottom: 50px;
     display: flex;
     flex-direction: column;
     opacity: 1;
@@ -19,7 +19,7 @@
         opacity: 0;
     }
     &.left {
-        left: 10px;
+        left: 15px;
         .player {
             .row {
                 flex-direction: row;
@@ -34,7 +34,7 @@
                     margin-right: auto;
                 }
                 .username .roundkills-container {
-                    right: 115px;
+                    right: 80px;
                 }
                 .secondary_weapon {
                     padding-right: 10px;
@@ -47,7 +47,8 @@
         }
     }
     &.right {
-        right: 10px;
+        right:15px;
+        align-items: flex-end;
         .player {
             flex-direction: row-reverse;
             .dead-stats {
@@ -66,7 +67,7 @@
                     .username {
                         flex-direction: row-reverse;
                         .roundkills-container {
-                            left: 115px;
+                            left: 80px;
                         }
                     }
                     .secondary_weapon {
@@ -98,11 +99,12 @@
         align-items: center;
         &.active {
             .player_data {
-                border: 2px solid white;
+                box-shadow: 0 0 0 2px white;
             }
         }
         &.dead {
             opacity: 0.7;
+            width: 270px;
             .player_side_bar {
                 background-color: var(--main-panel-color) !important;
             }
@@ -133,9 +135,6 @@
                     }
                 }
             }
-        }
-        &:last-child .player_data {
-            border-radius: 0 0 20px 20px;
         }
         .player_side_bar {
             width: 10px;
@@ -171,18 +170,22 @@
         }
         .player_data {
             background-color: var(--sub-panel-color);
-            width: 415px;
+            width: calc(415px - 80px);
             display: flex;
             flex-direction: row;
             position: relative;
             height: 100%;
+            overflow: hidden;
             .player_stats {
                 display: flex;
                 flex-direction: column;
                 flex: 1;
                 min-width: 0;
+                position: relative;
                 .hp_bar {
-                    height: 2px;
+                    height: 34px;
+                    top: 0;
+                    position: absolute;
                     &.low {
                         background-color: red;
                     }
@@ -306,6 +309,16 @@
                 }
             }
         }
+        &:first-of-type{
+            .player_data{
+                border-radius: 5px 5px 0 0;
+            }
+        }
+        &:last-of-type{
+            .player_data{
+                border-radius: 0 0 5px 5px;
+            }
+        }
     }
 }
 
@@ -319,6 +332,8 @@
     top: 10px;
     opacity: 1;
     transition: opacity 1s;
+    border-radius: 7px;
+    overflow: hidden;
     .counter_container {
         display: flex;
         height: 45px;

@@ -1,0 +1,12 @@
+.sponsor{
+  position: fixed;
+  bottom: 15px;
+  left: 0;
+  transform: translateX(calc(100% + 385px));
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 385px;
+  height: 60px;
+  background: var(--sub-panel-color);
+}

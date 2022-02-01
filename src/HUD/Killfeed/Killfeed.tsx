@@ -1,5 +1,5 @@
 import React from 'react';
-import { GSI } from './../../App';
+import { GSI } from '../../App';
 import { KillEvent, Player } from 'csgogsi-socket';
 import Kill from './Kill';
 import './killfeed.scss';

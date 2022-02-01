@@ -11,8 +11,6 @@ interface IProps {
 export default class TeamOverview extends React.Component<IProps> {
 	render() {
         if(!this.props.team) return null;
-		return (
-            null
-        );
+		return null;
 	}
 }

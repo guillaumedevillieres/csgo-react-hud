@@ -1,6 +1,6 @@
 import React from 'react';
 import './sideboxes.scss'
-import {configs, hudIdentity} from './../../App';
+import {configs, hudIdentity} from '../../App';
 import { apiUrl } from '../../api/api';
 
 export default class SideBox extends React.Component<{ side: 'left' | 'right', hide: boolean}, { title: string, subtitle: string, image?: string }> {
@@ -29,7 +29,6 @@ export default class SideBox extends React.Component<{ side: 'left' | 'right', h
             }
         });
 	}
-	
 	render() {
         const { image, title, subtitle} = this.state;
         if(!title) return '';
@@ -39,9 +38,9 @@ export default class SideBox extends React.Component<{ side: 'left' | 'right', h
                     <div className="title">{title}</div>
                     <div className="subtitle">{subtitle}</div>
                 </div>
-                <div className="image_container">
-                    {image ? <img src={image} id={`image_left`} alt={'Left'}/>:''}
-                </div>
+                    <div className="image_container">
+                        {image ? <img src={image} id={`image_left`} alt={'Left'}/>:''}
+                    </div>
             </div>
 		);
 	}

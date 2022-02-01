@@ -1,14 +1,14 @@
 .observed {
     position: fixed;
-    width: 620px;
-    bottom: 120px;
-    margin-left: -310px;
+    width: 540px;
+    bottom: 90px;
+    margin-left: -270px;
     left: 50%;
     height: 86px;
     display: flex;
     flex-direction: column;
     color: white;
-    background-color: rgba(0,0,0,0.6);
+    //background-color: rgba(0,0,0,0.6);
 
     .main_row, .stats_row {
         flex: 1;
@@ -21,7 +21,7 @@
 
     .stats_row {
         height: 28px;
-
+        background-color: rgba(0,0,0,.6);
         .stats_cell {
             height: 100%;
             width: 56px;
@@ -123,6 +123,8 @@
 
     .main_row {
         font-weight: 600;
+        font-size: 1.6em;
+        background: linear-gradient(135deg, rgba(187, 41, 104, .86) 0%, rgba(33, 201, 225, .86) 100%);
         .logo {
             height: 43px;
             display: flex;

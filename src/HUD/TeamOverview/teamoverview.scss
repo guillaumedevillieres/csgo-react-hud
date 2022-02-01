@@ -1,14 +1,14 @@
 .match-overview {
 	opacity: 0;
-	transition: opacity 0.75s;
+	transition: all 0.75s;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	right: 10px;
-	top: 375px;
+	right: 812px;
+	top: 150px;
 	background-color: #000000a8;
 	text-transform: uppercase;
-	width: 250px;
+	width: 296px;
 	color: white;
 }
 .match-overview.show {

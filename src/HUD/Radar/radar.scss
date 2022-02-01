@@ -3,8 +3,11 @@
 	top: 10px;
 	left: 10px;
 	border: none;
-	background-color: rgba(0,0,0,0.5);
+	//background-color: rgba(0,0,0,0.5);
+	display: flex;
 	transition: all 1s;
+	flex-direction: column-reverse;
+	justify-content: center;
 	.map-container {
 		transition: all 1s;
 	}
@@ -19,7 +22,10 @@
     transform: rotate3d(1, 0, 0, 14deg) translateX(-50%);
     transform-style: preserve-3d;
     left: 50%;
-    top: 100px;
+    top: 150px;
+	#maps_container{
+		display: none;
+	}
 	.map {
 		perspective: 500px;
 	}
@@ -57,5 +63,14 @@
 	.map_name.active {
 		text-shadow: 0 0 15px white;
 		font-weight: 600;
+		position: relative;
+		&:after{
+			content: '';
+			background: #FFF;
+			position: absolute;
+			bottom: -2px;
+			width: 80%;
+			height: 2px;
+		}
 	}
 }

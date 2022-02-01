@@ -2,7 +2,7 @@ import React from "react";
 import "./radar.scss";
 import { Match, Veto } from "../../api/interfaces";
 import { Map, CSGO, Team } from 'csgogsi-socket';
-import { actions } from './../../App';
+import { actions } from '../../App';
 import Radar from './Radar'
 import TeamLogo from "../MatchBar/TeamLogo";
 
@@ -61,9 +61,10 @@ class MapsBar extends React.PureComponent<Props> {
 class MapEntry extends React.PureComponent<{ veto: Veto, map: Map, team: Team | null }> {
     render() {
         const { veto, map, team } = this.props;
+        let flushMapName = veto.mapName.substr(3);
         return <div className="veto_entry">
             <div className="team_logo">{team ? <TeamLogo team={team} /> : null}</div>
-            <div className={`map_name ${map.name.includes(veto.mapName) ? 'active' : ''}`}>{veto.mapName}</div>
+            <div className={`map_name ${map.name.includes(veto.mapName) ? 'active' : ''}`}>{flushMapName}</div>
         </div>
     }
 }
